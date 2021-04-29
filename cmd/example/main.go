@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-quick-env/internal/quickenv"
+	"go-quick-env/pkg/quickenv"
 )
 
 type Example struct {

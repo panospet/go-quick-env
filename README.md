@@ -7,7 +7,7 @@ This library offers a quick way to do exactly that!
 
 #### Example
 
-```
+```go
 type Example struct {
 	MyBool   bool
 	MyInt    int
