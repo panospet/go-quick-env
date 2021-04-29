@@ -61,7 +61,6 @@ func GetEnvAsFloat(name string, defaultVal float64) float64 {
 
 func GetEnvAsBool(name string, defaultVal bool) bool {
 	valueStr := GetEnvAsString(name, "")
-	fmt.Println(valueStr)
 	if val, err := strconv.ParseBool(valueStr); err == nil {
 		return val
 	}
