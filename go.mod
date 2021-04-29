@@ -1,4 +1,4 @@
-module go-quick-env
+module github.com/panospet/go-quick-env
 
 go 1.16
 
