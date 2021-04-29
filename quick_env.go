@@ -1,4 +1,4 @@
-package quickenv
+package goquickenv
 
 import (
 	"bufio"
