@@ -15,13 +15,15 @@ TEST_VAR="hello"
 TEST_FLOAT_VAR=89.98
 ```
 
-And your go code should be like: 
+And your go code should be like:
+
 ```go
 package main
 
 import (
 	"fmt"
-	
+	"log"
+
 	goquickenv "github.com/panospet/go-quick-env"
 )
 
@@ -33,8 +35,8 @@ type Example struct {
 }
 
 func main() {
-	if err := goquickenv.LoadDotEnvFile(); err != nil { // same with goquickenv.LoadFile(".env")
-		panic(err)
+	if err := goquickenv.LoadFile(".env"); err != nil {
+		log.Fatalln(err)
 	}
 
 	var example Example
