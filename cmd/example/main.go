@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/panospet/go-quick-env"
+	goquickenv "github.com/panospet/go-quick-env"
 )
 
 type Example struct {

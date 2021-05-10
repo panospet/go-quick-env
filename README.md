@@ -7,7 +7,23 @@ This library offers a quick way to do exactly that!
 
 #### Example
 
+Create a .env file like this:
+```
+TEST_BOOL_VAR=false
+TEST_INT_VAR=666
+TEST_VAR="hello"
+TEST_FLOAT_VAR=89.98
+```
+
 ```go
+package main
+
+import (
+	"fmt"
+	
+	goquickenv "github.com/panospet/go-quick-env"
+)
+
 type Example struct {
 	MyBool   bool
 	MyInt    int
@@ -16,19 +32,20 @@ type Example struct {
 }
 
 func main() {
-	if err := quickenv.LoadDotEnvFile(); err != nil {
+	if err := goquickenv.LoadDotEnvFile(); err != nil {
 		panic(err)
 	}
 
 	var example Example
 
-	example.MyBool = quickenv.GetEnvAsBool("TEST_BOOL_VAR", true)
-	example.MyInt = quickenv.GetEnvAsInt("TEST_INT_VAR", 90)
-	example.MyString = quickenv.GetEnvAsString("TEST_VAR", "not")
-	example.MyFloat = quickenv.GetEnvAsFloat("TEST_FLOAT_VAR", 1.11)
+	example.MyBool = goquickenv.GetEnvAsBool("TEST_BOOL_VAR", true)
+	example.MyInt = goquickenv.GetEnvAsInt("TEST_INT_VAR", 90)
+	example.MyString = goquickenv.GetEnvAsString("TEST_VAR", "not")
+	example.MyFloat = goquickenv.GetEnvAsFloat("TEST_FLOAT_VAR", 1.11)
 
-	fmt.Println(example)
+	fmt.Println(example) // should print {false 666 hello 89.98}
 }
+
 
 ```
 
