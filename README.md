@@ -33,7 +33,7 @@ type Example struct {
 }
 
 func main() {
-	if err := goquickenv.LoadDotEnvFile(); err != nil {
+	if err := goquickenv.LoadDotEnvFile(); err != nil { // same with goquickenv.LoadFile(".env")
 		panic(err)
 	}
 
