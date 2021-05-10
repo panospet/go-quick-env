@@ -15,6 +15,7 @@ TEST_VAR="hello"
 TEST_FLOAT_VAR=89.98
 ```
 
+And your go code should be like: 
 ```go
 package main
 
